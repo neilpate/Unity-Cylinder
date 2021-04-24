@@ -1,0 +1,52 @@
+{
+    "name": "Input Controls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "2fbcd0f3-fb9c-4e55-be59-132d238c3d9a",
+            "actions": [
+                {
+                    "name": "RotateCounterClockwise",
+                    "type": "Button",
+                    "id": "803093b6-af44-47ed-a134-d2e8a14d05b3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                },
+                {
+                    "name": "RotateClockwise",
+                    "type": "Button",
+                    "id": "74c2ea68-975e-4da4-a80f-dc0595d13972",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "242b09b1-cb86-4c1f-a0a7-6fe16d974373",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateCounterClockwise",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0186b5b9-23ee-45e0-8091-62fe46e81155",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateClockwise",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
