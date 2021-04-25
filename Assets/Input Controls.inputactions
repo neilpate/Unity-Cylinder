@@ -14,6 +14,22 @@
                     "interactions": "Press(behavior=2)"
                 },
                 {
+                    "name": "RotateUp",
+                    "type": "Button",
+                    "id": "af06c60c-be3d-4ef1-872c-4d922a401731",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                },
+                {
+                    "name": "RotateDown",
+                    "type": "Button",
+                    "id": "60db7e32-d779-43e9-910e-5ee128c6e5e0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                },
+                {
                     "name": "RotateClockwise",
                     "type": "Button",
                     "id": "74c2ea68-975e-4da4-a80f-dc0595d13972",
@@ -42,6 +58,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "RotateClockwise",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d6bf3c0f-b5d7-40a5-a737-0af817fc8c93",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cbf31dd9-06df-494a-8bff-a9a7494f4534",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
