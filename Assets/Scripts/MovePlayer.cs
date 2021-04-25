@@ -12,42 +12,39 @@ public class MovePlayer : MonoBehaviour
     [SerializeField]
     GameObject player;
 
-    public InputActionMap actionMap;
-    public InputAction move;
-
-    //public bool RotatingCounterClockwise;
-    //public bool RotatingClockwise;
-    //public bool RotatingUp;
-    //public bool RotatingDown;
-
-
-
-    //public bool RotatingClockwiseSecondMethod;
-
     [SerializeField]
     public float MoveSpeedControl;
 
-    //private float rotateClockwiseSpeed;
-    //private float rotateUpSpeed;
+    [SerializeField]
+    public float JumpForce;
 
+    InputActionMap actionMap;
+    InputAction move;
+    InputAction jump;
 
-    public int count;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    Rigidbody rb;
 
     private void Awake()
     {
         actionMap = playerInput.actions.FindActionMap("Player");
         move = actionMap.FindAction("Move");
+        jump = actionMap.FindAction("Jump");
 
-
-        //Example, calling delegate without specifying any parameters
         move.started += OnMove;
+        jump.started += OnJump;
+
+
+        rb = player.GetComponent<Rigidbody>();
 
     }
+
+
+    private void OnJump(InputAction.CallbackContext obj)
+    {
+        rb.AddForce(0, JumpForce, 0);
+
+    }
+
 
 
     private void OnMove(InputAction.CallbackContext obj)
@@ -55,9 +52,6 @@ public class MovePlayer : MonoBehaviour
         var movement = obj.ReadValue<Vector2>();
 
         var translation = new Vector3(movement[0] * MoveSpeedControl, movement[1] * MoveSpeedControl, 0);
-
-        count++;
-        //   player.transform.Translate(translation);
 
 
         if (movement[0] < 0)
