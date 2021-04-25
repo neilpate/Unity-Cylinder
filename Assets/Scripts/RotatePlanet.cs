@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Controller : MonoBehaviour
+public class RotatePlanet : MonoBehaviour
 {
     [SerializeField]
     private PlayerInput playerInput;
@@ -46,10 +46,10 @@ public class Controller : MonoBehaviour
     private void Awake()
     {
         actionMap = playerInput.actions.FindActionMap("Player");
-        rotateCounterClockwise = actionMap.FindAction("RotateCounterClockwise");
-        rotateClockwise = actionMap.FindAction("RotateClockwise");
-        rotateUp = actionMap.FindAction("RotateUp");
-        rotateDown = actionMap.FindAction("RotateDown");
+        rotateCounterClockwise = actionMap.FindAction("RotatePlanetCounterClockwise");
+        rotateClockwise = actionMap.FindAction("RotatePlanetClockwise");
+        rotateUp = actionMap.FindAction("RotatePlanetUp");
+        rotateDown = actionMap.FindAction("RotatePlanetDown");
 
 
 

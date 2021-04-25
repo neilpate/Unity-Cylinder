@@ -6,7 +6,7 @@
             "id": "2fbcd0f3-fb9c-4e55-be59-132d238c3d9a",
             "actions": [
                 {
-                    "name": "RotateCounterClockwise",
+                    "name": "RotatePlanetCounterClockwise",
                     "type": "Button",
                     "id": "803093b6-af44-47ed-a134-d2e8a14d05b3",
                     "expectedControlType": "Button",
@@ -14,7 +14,7 @@
                     "interactions": "Press(behavior=2)"
                 },
                 {
-                    "name": "RotateUp",
+                    "name": "RotatePlanetUp",
                     "type": "Button",
                     "id": "af06c60c-be3d-4ef1-872c-4d922a401731",
                     "expectedControlType": "Button",
@@ -22,7 +22,7 @@
                     "interactions": "Press(behavior=2)"
                 },
                 {
-                    "name": "RotateDown",
+                    "name": "RotatePlanetDown",
                     "type": "Button",
                     "id": "60db7e32-d779-43e9-910e-5ee128c6e5e0",
                     "expectedControlType": "Button",
@@ -30,10 +30,18 @@
                     "interactions": "Press(behavior=2)"
                 },
                 {
-                    "name": "RotateClockwise",
+                    "name": "RotatePlanetClockwise",
                     "type": "Button",
                     "id": "74c2ea68-975e-4da4-a80f-dc0595d13972",
                     "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                },
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "39686ad1-5036-4739-91c6-bd15569db469",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "Press(behavior=2)"
                 }
@@ -46,7 +54,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "RotateCounterClockwise",
+                    "action": "RotatePlanetCounterClockwise",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -57,7 +65,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "RotateClockwise",
+                    "action": "RotatePlanetClockwise",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -68,7 +76,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "RotateUp",
+                    "action": "RotatePlanetUp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -79,9 +87,64 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "RotateDown",
+                    "action": "RotatePlanetDown",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "ArrowKeys",
+                    "id": "0f3978dd-444a-4c38-9d40-52b96ac82226",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "d967f49e-46b5-4144-a5ce-ee4471068007",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "3814b4ce-5fab-4a98-87b1-8d0aba8c559c",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "9305c428-d3de-4aa2-b809-4da33f619a62",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "d0026d90-caa8-4909-98d7-3dcdc1694c5d",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
